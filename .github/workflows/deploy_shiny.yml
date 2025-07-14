@@ -10,8 +10,8 @@ jobs:
     name: Deploy to shinyapps.io
     runs-on: ubuntu-latest
     env:
-      GITHUB_PAT: ${{ secrets.ACCESS_TOKEN }}
-      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      GITHUB_PAT: ${{ secrets.SHINY_TOKEN }}
+      ACCESS_TOKEN: ${{ secrets.SHINY_TOKEN }}
         
     steps:
        - name: 🛎️ Checkout repository
@@ -22,8 +22,8 @@ jobs:
          name: 💎 Deploy to shinyapps.io
          uses: qwert666/shinyapps-actions@main
          env:
-           SHINY_USERNAME: 'katherinehebert'
+           SHINY_USERNAME: 'praveenm7'
            SHINY_TOKEN: ${{ secrets.TOKEN }}
            SHINY_SECRET: ${{ secrets.SECRET }}
-           APP_NAME: 'myApp'
+           APP_NAME: 'PowerAnalysis_App'
            APP_DIR: ''
