@@ -1,0 +1,11 @@
+Package: PowerAnalysisApp
+Type: Shiny
+Title: Power Analysis App
+Version: 0.1.0
+Author: Your Name
+Description: Power analysis for comparing T20 batting pairs.
+Depends:
+    R (>= 3.5.0)
+Imports:
+    shiny,
+    pwr
