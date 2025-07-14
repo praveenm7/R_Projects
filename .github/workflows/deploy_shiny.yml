@@ -22,7 +22,7 @@ jobs:
         name: 💎 Deploy to shinyapps.io
         uses: praveenm7/shinyapps-actions@main
         env:
-          SHINY_USERNAME: 'praveenm7'
+          SHINY_USERNAME: 'praveen-morais'
           SHINY_TOKEN: ${{ secrets.SHINY_TOKEN }}
           SHINY_SECRET: ${{ secrets.SHINY_SECRET }}
           APP_NAME: 'PowerAnalysis_App'
