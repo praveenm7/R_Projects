@@ -20,7 +20,7 @@ jobs:
            fetch-depth: 0
        - id: deploy
          name: 💎 Deploy to shinyapps.io
-         uses: qwert666/shinyapps-actions@main
+         uses: praveenm7/shinyapps-actions@main
          env:
            SHINY_USERNAME: 'praveenm7'
            SHINY_TOKEN: ${{ secrets.TOKEN }}
