@@ -1,7 +1,7 @@
 on:
   push:
-     branches:
-       - main
+    branches:
+      - main
 
 name: Deploy template app to shinyapps.io
 
@@ -11,19 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.SHINY_TOKEN }}
-      ACCESS_TOKEN: ${{ secrets.SHINY_TOKEN }}
-        
+
     steps:
-       - name: 🛎️ Checkout repository
-         uses: actions/checkout@v2
-         with:
-           fetch-depth: 0
-       - id: deploy
-         name: 💎 Deploy to shinyapps.io
-         uses: praveenm7/shinyapps-actions@main
-         env:
-           SHINY_USERNAME: 'praveenm7'
-           SHINY_TOKEN: ${{ secrets.TOKEN }}
-           SHINY_SECRET: ${{ secrets.SECRET }}
-           APP_NAME: 'PowerAnalysis_App'
-           APP_DIR: ''
+      - name: 🛎️ Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - id: deploy
+        name: 💎 Deploy to shinyapps.io
+        uses: praveenm7/shinyapps-actions@main
+        env:
+          SHINY_USERNAME: 'praveenm7'
+          SHINY_TOKEN: ${{ secrets.SHINY_TOKEN }}
+          SHINY_SECRET: ${{ secrets.SHINY_SECRET }}
+          APP_NAME: 'PowerAnalysis_App'
+          APP_DIR: ''
