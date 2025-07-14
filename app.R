@@ -1,3 +1,8 @@
+if (!require(pwr)) {
+  install.packages("pwr", repos = "https://cloud.r-project.org/")
+  library(pwr)
+}
+
 # Load required packages
 library(shiny)
 library(pwr)
